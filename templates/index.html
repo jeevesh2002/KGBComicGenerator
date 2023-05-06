@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index</title>
+</head>
+<body>
+  <h1>Index</h1>
+  <form action="/home" method="POST">
+    <label for="type">Select type:</label>
+    <select id="type" name="type">
+      <option value="ideal">Ideal</option>
+      <option value="noisy">Noisy</option>
+    </select>
+    <br><br>
+    <label for="num_qubits">Select num qubits:</label>
+    <input type="range" id="num_qubits" name="num_qubits" min="5" max="20" value="10" onchange="updateNumQubitsValue()">
+    <span id="num_qubits_value">10</span>
+    <br><br>
+    <label for="my_list">Enter comma-separated list: please add quotes</label>
+    <input type="text" id="my_list" name="my_list">
+    <br><br>
+    <label for="pre_prompt">Enter the pre_prompt like Generate comic in Neon/Digital style etc</label>
+    <input type="text" id="pre_prompt" name="pre_prompt">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function updateNumQubitsValue() {
+      var slider = document.getElementById("num_qubits");
+      var output = document.getElementById("num_qubits_value");
+      output.innerHTML = slider.value;
+    }
+  </script>
+</body>
+</html>

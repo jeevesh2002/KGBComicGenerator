@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comic</title>
+</head>
+<body>
+    <!-- {% for url in urls %}
+        <img src="{{ url }}" width="400"><br><br>
+    {% endfor %} -->
+
+    {% for i in [0,1,2] %}
+        <img src="{{ urls[i] }}" width="400"><br><br>
+        <p>{{ text[i] }}</p>
+    {% endfor %}
+    
+</body>
+</html>
