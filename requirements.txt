@@ -10,3 +10,4 @@ qiskit_terra==0.24.0
 Requests==2.30.0
 scipy==1.7.3
 gunicorn
+python-dotenv
